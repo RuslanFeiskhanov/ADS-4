@@ -25,9 +25,11 @@ int binar (int *arr, int l, int r, int x) {
             break;
         }
         if (x < arr[mid])
+            rt = mid-1;
             rt = mid - 1;
         else
         if (x > arr[mid])
+            lt = mid+1;
             lt = mid + 1;
     }
     return 0;
@@ -35,6 +37,7 @@ int binar (int *arr, int l, int r, int x) {
 int countPairs3(int *arr, int len, int value) {
     int count = 0;
     for (int i = 0; i < len; i++) {
+       count += binar(arr, i, len -1, value - arr[i]);
        count += binar(arr, i, len - 1, value - arr[i]);
     }
     return count;

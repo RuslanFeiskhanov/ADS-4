@@ -26,7 +26,7 @@ int binar(int *arr, int l, int r, int x) {
         if (x < arr[mid])
             rt = mid - 1;
         else
-            lt = mid + 1 ;
+            lt = mid + 1;
     }
     return 0;
 }

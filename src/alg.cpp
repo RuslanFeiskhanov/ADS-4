@@ -39,3 +39,4 @@ int countPairs3(int *arr, int len, int value) {
        count += binar(arr, i, len - 1, value - arr[i]);
     }
     return count;
+}
